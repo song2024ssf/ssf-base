@@ -1,0 +1,19 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: tool-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+campus:
+  security:
+    enabled: true
+    jwt:
+      secret: "YourVeryLongAndSecureSecretKeyForJwtSigning!@#123"
+      expiration: 604800
+      header: "Authorization"
+      token-prefix: "Bearer "
